@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hilda Hilst</title>
+  <link rel="stylesheet" href="styles.css">
+
+
+
+
+  <style>
+   html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+  }
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f5f5dc;
+  }
+   .container {
+      width: 80%;
+      margin: 0 auto;
+  }
+   header {
+      padding: 20px 0;
+  }
+   nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+   nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+  }
+   nav ul li {
+      margin-right: 20px;
+  }
+   nav ul li a {
+      text-decoration: none;
+      color: #333;
+      transition: color 1.0s ease;
+  }
+   nav ul li a:hover {
+      color: #fff;
+  }
+   .hero {
+      background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBZfARDAKr4Y6WrC825eXi9SNkrQbfzFFjb66z-mTqdsNKJV9thKqjbMBcXHNY3z_322Z3hW8sFD5VBLQf11zUbSb_F51oX8nGTkM5fxtwzn5qm4qo9BJPc_ooc0e2Uae5evWNWFkmVA/s640/Hilda-H.png');
+      background-size: top;
+      background-position: top;
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+      max-width: 100%;
+  }
+   .tabs {
+  list-style-type: none;
+  padding: 10px 20px;
+  margin: 0;
+  background-color:  #F5F5DC;
+  display: flex;
+  max-lines: 1;
+  display: flex;
+  align-items: center;
+  transition: background-color 1.0s ease;
+}
+
+
+
+
+.tabs li {
+  flex: 1;
+  max-lines: 1;
+}
+
+
+
+
+.tabs li a {
+  display: block;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  transition: color 1.5s ease;
+  border-radius: 5px;
+  
+}
+
+.tabs li a:hover {
+  background-color: #9baf96;
+  color: #fff;
+}
+
+
+
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: #9baf96;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-lines: 1;
+}
+
+
+
+
+.tab-content.active {
+  display: block;
+  max-lines: 1;
+}
+   .about, .works, .styl, .rec, .ic{
+      padding: 80px 0;
+      align-items: center;
+  }
+  
+   a {
+      color: #9baf96;
+  }
+
+  .contact {
+  background-color: #F5F5DC;
+  padding: 80px 0;
+}
+
+
+
+
+.contact h3 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+
+
+.contact p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+
+
+
+.contact a {
+  display: inline-block;
+  background-color: #666;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 1.0s ease;
+}
+
+
+
+
+.contact a:hover {
+  background-color: #9baf96;
+}
+   .btn {
+      display: inline-block;
+      background-color: #666;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 1.0s ease;
+  }
+
+
+
+
+  .btn:hover {
+      background-color: #9baf96;
+    }
+   footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+  }
+   footer p {
+      margin: 0;
+      text-align: top;
+  }
+
+
+
+
+  @media (max-width: 768px) {
+      .container {
+          width: 90%;
+        
+      }
+       nav {
+          flex-direction: column;
+      }
+       nav ul {
+          flex-direction: column;
+      }
+       nav ul li {
+          margin-right: 0;
+          margin-bottom: 10px;
+      }
+  }
+  </style>
+
+</head>
+<body>
+  <header>
+      <nav class="container">
+          <ul class="tabs">
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#biografia">Biografia</a></li>
+              <li><a href="#obras">Obras</a></li>
+              <li><a href="#estiloliterario">Estilo Literário</a></li>
+              <li><a href="#reconhecimento">Reconhecimento</a></li>
+              <li><a href="#impactocultural">Impacto Cultural</a></li>
+              <li><a href="#contato">Contato</a></li>
+          </ul>
+      </nav>
+  </header>
+  <section id="inicio" class="hero">
+      <div class="container">
+          <h1>Hilda Hilst</h1>
+          <p>Conheça a vida e a obra da escritora brasileira renomada.</p>
+          <a href="#biografia" class="btn">Saiba Mais</a>
+      </div>
+  </section>
+  <section>
+    
+  </section>
+  <section id="biografia" class="about">
+      <div class="container">
+          <h2><font size="10px">Biografia</font></h2>
+          <br><br>
+          <p>Hilda Hilst (1930-2004) foi uma poetisa, cronista, dramaturga e ficcionista brasileira. Fez parte da “Geração de 45” que buscava a reabilitação de regras mais rígidas para a composição do verso. Foi considerada uma das maiores escritoras do século XX.
+              <br><br>
+              Hilda Hilst nasceu em 21 de abril de 1930, em Jaú, no estado de São Paulo. Em 1952, formou-se em direito, mas exerceu a profissão apenas por um ano e decidiu se dedicar exclusivamente à literatura. Mais tarde, casou-se como o escultor Dante Casarini, e foram morar na Casa do Sol, lugar que se tornou um ponto de encontro de artistas.
+              <br><br>
+             A escritora, que faleceu em 04 de fevereiro de 2004, em Campinas, teve uma vida dedicada, principalmente, à poesia, mas, também, escreveu narrativas e peças de teatro. Suas obras são caracterizadas pelo monólogo interior, erotismo e questionamentos existenciais.
+              </p>
+              <br><br>
+              <p><li><font size="5px">Infância e Juventude</font></li></p>
+              <br>
+              <p>
+                  Hilda de Almeida Prado Hilst, conhecida como Hilda Hilst nasceu em Jaú, São Paulo, no dia 21 de abril de 1930. Filha de Apolônio de Almeida Prado Hilst fazendeiro de café e jornalista, e de Bedecilda Vaz Cardoso, imigrante portuguesa. Em 1932, após a separação dos pais, mudou-se com a mãe para a cidade de Santos. Em 1937 foi morar em São Paulo, capital. Cursou o primário e o ginasial no internato do Colégio Santa Marcelina. Em 1947, concluiu o secundário no Instituto Presbiteriano Mackenzie. Em 1948, ingressou na Faculdade de Direito da Universidade de São Paulo.
+              </p>
+              <br><br>
+              <p><li><font size="5px">Carreira Literária</font></li></p>
+              <br>
+              <p>
+                  Hilda Hilst era culta, de personalidade marcante e temperamento transgressor que ia de encontro aos costumes da época. Fez parte da geração da poesia brasileira que foi denominada “Geração de 45”, que reagiu contra o prosaico e o supérfluo. Entendiam os poetas que as conquistas dos modernistas de 22 deveriam ser abandonadas.
+                  <br><br>
+                  Ela rompe com o bom tom clássico literário, uma vez que nada é passivo em seus textos. A poesia de Hilda Hilst passeia por temas como solidão, morte, amor, a loucura, o misticismo e o amor erótico. Enigmática, mística, dona de um texto, na maioria das vezes, estranho, instigante, é capaz de surpreender o leitor.
+              </p>
+              <br>
+              <a href="#inicio" class="btn">Voltar ao Início</a>
+      </div>
+  </section>
+  <section id="obras" class="works">
+      <div class="container">
+          <h2><font size="7px">Obras Notáveis</font></h2>
+          <br><br>
+          <ul>
+              <details>
+              <summary><strong>Do Desejo</strong>(1992)<font size="1px"><br>(clique para saber mais)</font></summary>
+              <p>
+                  Lançado originalmente em 1992, Do desejo é uma reunião (não uma antologia, como se tem divulgado) de sete livros de Hilda Hilst, produzidos num intervalo de seis anos. Dois deles eram então inéditos: Do desejo (homônimo do título do conjunto) e Da Noite. Concebida pela própria autora, a reunião desses livros oferece, na sua disposição não-cronológica, possibilidades originais de leitura que o tornam um livro único, bem diferente da soma de leituras de cada livro particular incorporado nele. Se fosse possível reduzir sua poesia de questões a uma única, Do desejo postula o dilema de sustentar o gozo de um amante particular e viciado em versos que buscam a eternidade e o absoluto.
+                  <br><br><br>
+                  <a href="https://aulasdathaisunitau.files.wordpress.com/2018/08/do-desejo-hilda-hilst.pdf" target="_blank" rel="noopener noreferrer">Clique aqui para acessar o PDF do livro</a>
+              </p>
+              </details>
+              <br>
+              <details>
+              <summary><strong>A Obscena Senhora D </strong>(1982)<font size="1px"><br>(clique para saber mais)</font></summary>
+                  <p>
+                      A obra A Obscena Senhora D. é centrada na jornada interna de uma mulher madura e solitária, mergulhada em sua própria mente e fantasia. O estilo da, que é uma prosa poética e fragmentada, coloca o leitor em um mundo de sensações intensas, onde a protagonista tenta desesperadamente estabelecer uma conexão emocional e sexual, desafiando os tabus e convenções sociais.
+                      <br><br>
+                      A obra lida com temas de solidão, liberdade sexual e envelhecimento, pois a Sra. D. retrata tentativas de resolver a questão de sua própria identidade e o problema do significado da vida, com a sexualidade sendo usada como metáfora. O livro também é um estudo sobre o tema da solidão em geral, já que a personagem principal tenta viver livremente e abertamente, em meio a um completo isolamento.
+                  <br><br><br>
+                  <a href="https://www.afoiceeomartelo.com.br/posfsa/Autores/Hilst,%20Hilda/A%20obscena%20senhora%20D.pdf" target="_blank" rel="noopener noreferrer"> Clique aqui para acessar o PDF do livro</a>
+                  </p>
+              </details>
+              <br>
+              <details>
+              <summary><strong>Dez Chamamentos ao Amigo</strong>(1974)<font size="1px"><br>(clique para saber mais)</font></summary>
+              <p>
+                  No poema “Dez chamamentos ao amigo”, o qual inicia o livro Júbilo, memória e noviciado da paixão (1974), o eu lírico expressa o anseio de que seu amigo não a olhe com um olhar de amizade, mas, sim, que ressignifique esse olhar, suscitando o desejo nele.
+                  <br><br>
+                   Há no poema uma menção de que este rio não toca nem as margens da terra, mas que o eu lírico tem esperança de que, um dia, ele a toque num sentido erótico, esperando que ele estenda seu corpo de água em seu corpo de terra, quando esse desejo vier a se materializar.
+                  <br><br>
+                
+                   O eu lírico deseja que, dessa vez, ele a olhe não com altivez, ou seja, com um olhar menos arrogante e que perceba que ela o deseja mais do que como um amigo, como se fizesse referência a um outro momento, no qual este amigo a olhou de forma arrogante, se vendo superior a ela e que, dessa maneira, não possibilitou que o desejo fluísse entre os dois.
+                  <br><br>
+                   Agora, se o amado, ao invés de tratá-la com essa postura altiva, se portasse como alguém que entende que uma mulher tem tantos desejos quanto um homem, essa relação entre os dois poderia se fazer material e carnal, invertendo a tópica que caracteriza o desejo feminino como imaterial, como até agora colocado no poema.
+                  <br><br>
+                   Em complemento, Hilda coloca na cartografia do poema seu objeto de desejo, revelando que, muitas vezes, esse sentimento não é saciado pelo fato de a outra parte, atribuída ao universo masculino, não conseguir notar a capacidade feminina de sentir desejo e de querer o gozo na atividade sexual, tanto quanto a natureza masculina.                                        
+                  <br><br><br>
+                  <a href="https://www.companhiadasletras.com.br/trechos/14447.pdf" target="_blank"> Clique aqui para acessar o PDF do livro (Júbilo, memória, noviciado da paixão)</a>
+                  </p>
+              </details>
+          </ul>
+          <br>
+              <a href="#inicio" class="btn">Voltar ao Início</a>
+      </div>
+  </section>
+  <section id="estiloliterario" class="styl">
+       <div class="container">
+           <h2><font size="7px">Estilo Literário</font></h2>
+           <br><br>
+           <p>
+               <li>Experimentação linguística: Desafia as normas linguísticas tradicionais, explorando novas formas de expressão.</li><br>
+               <li>Exploração de temas tabus: Enfrenta questões sociais e morais frequentemente evitadas pela sociedade.</li><br>
+               <li>Introspecção psicológica: Adentra as profundezas do psicológico humano, explorando os labirintos da mente e das emoções.</li><br>
+               <li>Influências filosóficas e espirituais: Reflete sobre questões existenciais e metafísicas, inspiradas por uma ampla variedade de tradições filosóficas e espirituais.</li><br>
+           </p>
+           <br>
+               <a href="#inicio" class="btn">Voltar ao Início</a>
+       </div>
+  </section>
+  <section id="reconhecimento" class="rec">
+       <div class="container">
+           <h2><font size="7px">Reconhecimento</font></h2>
+           <br><br>
+           <p>
+               <li>Prêmios e legado: Hilda Hilst recebeu vários prêmios ao longo de sua carreira, incluindo o Prêmio Jabuti. Seu legado na literatura brasileira é inegável, influenciando gerações de escritores e leitores.</li>
+           </p>
+           <br><br>
+               <a href="#inicio" class="btn">Voltar ao Início</a>
+       </div>
+  </section>
+  <section id="impactocultural" class="id">
+        <div class="container">
+            <h2><font size="7px">Impacto Cultural</font></h2>
+            <br><br>
+            <p>
+                <li>Adaptações para teatro e cinema: Suas obras foram adaptadas para o teatro e o cinema, ampliando seu alcance cultural.</li>
+                <li>Relevância duradoura: Sua obra continua a inspirar e desafiar, abrindo novos horizontes para a expressão literária no Brasil.</li>
+            </p>
+            <br><br>
+                <a href="#inicio" class="btn">Voltar ao Início</a>
+        </div>
+     </section>
+     <section id="contato" class="contact">
+    <div class="container">
+        <h3><font size="10px">Contato</font></h3>
+        <p>Entre em contato para tirar dúvidas e/ou fazer comentários.</p>
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCCRnMgdDlqZWdXvTmxJvmbmbXKdtfkxfzBCnQZtrRgqXqKlCTsSfBKKKRWmRwqRMvXxMg" target="_blank" rel="noopener noreferrer">Clique aqui para mandar um e-mail</a>
+        <p><font size="2px">(Envie para cphildahilst@gmail.com)</font></p>
+        <br>
+        <a href="#inicio" class="btn">Voltar ao Início</a>
+    </section>
+      <footer>
+          <div class="conatiner">
+          <p>Desenvolvido por: Camis</p>
+      </div>
+        </footer>
+  </footer>
+</body>
+</html>
